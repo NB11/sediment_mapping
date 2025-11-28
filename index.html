@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahara Geology Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="app-container">
+        <div class="map-container">
+            <div id="map-view"></div>
+            
+            <!-- Floating Title Widget -->
+            <div class="floating-widget title-widget">
+                <h1>Sahara Geology</h1>
+                <p class="subtitle">Interactive Map</p>
+            </div>
+            
+            <!-- Floating Geological Domains Button -->
+            <div class="floating-widget geological-domains-widget">
+                <button id="geological-domains-btn" class="geological-domains-btn">Geological domains</button>
+            </div>
+            
+            <!-- Floating Feature Info Widget -->
+            <div id="feature-info" class="floating-widget feature-widget hidden">
+                <h2>Feature Details</h2>
+                <div id="feature-content"></div>
+            </div>
+            
+            <!-- Image Popup Modal -->
+            <div id="image-popup" class="image-popup hidden">
+                <div class="popup-overlay"></div>
+                <div class="popup-content">
+                    <button class="popup-close">&times;</button>
+                    <img src="images/geological_domains.jpg" alt="Geological Domains">
+                    <div class="popup-reference">
+                        Guido Pastore et al. 2021 - <a href="https://www.sciencedirect.com/science/article/pii/S0012825221001069#f0015" target="_blank" rel="noopener noreferrer">Reference</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
